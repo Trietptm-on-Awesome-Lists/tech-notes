@@ -10,3 +10,13 @@ defined as a key/value store where one key can map to one or more values.
 2. Homogenous Environment - each and every Cassandra node contains everything required to complete a cluster.
 3. Tunable Consistency
 
+####Configuration - (Cassandra.yaml)
+```bash
+# Cluster_name
+
+# num_tokens - default 256 - This means the amount of data in propotion to the cluster this node owns.
+
+# initial_token 
+```
+[Setup a highly avaiable cluster](http://highscalability.com/blog/2016/8/1/how-to-setup-a-highly-available-multi-az-cassandra-cluster-o.html)
+[Jepsen Cassandra](https://aphyr.com/posts/294-jepsen-cassandra)
