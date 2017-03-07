@@ -18,5 +18,5 @@ defined as a key/value store where one key can map to one or more values.
 
 # initial_token 
 ```
-[Setup a highly avaiable cluster](http://highscalability.com/blog/2016/8/1/how-to-setup-a-highly-available-multi-az-cassandra-cluster-o.html)
-[Jepsen Cassandra](https://aphyr.com/posts/294-jepsen-cassandra)
+1. [Setup a highly avaiable cluster](http://highscalability.com/blog/2016/8/1/how-to-setup-a-highly-available-multi-az-cassandra-cluster-o.html)
+2. [Jepsen Cassandra](https://aphyr.com/posts/294-jepsen-cassandra)
