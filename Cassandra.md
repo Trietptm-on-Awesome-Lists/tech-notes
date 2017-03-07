@@ -75,3 +75,4 @@ This is the address that the host listens on. When left unspecified, the listen 
 1. [Operating Cassandra](http://cassandra.apache.org/doc/latest/operating/index.html)
 2. [Inernals from Cassandra Wiki](https://wiki.apache.org/cassandra/ArchitectureInternals)
 3. [Learn Cassandra](https://www.gitbook.com/book/teddyma/learncassandra/details)
+4. [Practical Cassandra - A developer's Approach]()
