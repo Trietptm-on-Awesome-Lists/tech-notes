@@ -10,7 +10,7 @@ defined as a key/value store where one key can map to one or more values.
 2. Homogenous Environment - each and every Cassandra node contains everything required to complete a cluster.
 3. Tunable Consistency
 
-####Configuration - (Cassandra.yaml)
+####[Configuration](http://cassandra.apache.org/doc/latest/configuration/cassandra_config_file.html) - (Cassandra.yaml)
 ```bash
 # Cluster_name
 
