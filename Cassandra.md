@@ -81,3 +81,6 @@ This is the address that the host listens on. When left unspecified, the listen 
 4. [Practical Cassandra - A developer's Approach]()
 5. [Amazon Dynamo Whitepaper](http://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf
 6. [Google Big Table White paper](http://xpgc.vicp.net/course/svt/TechDoc/storagepaper/bigtable-osdi06.pdf)
+
+####Monitoring
+1.[Enable Cassandra Monitoring with Graphana](https://www.pythian.com/blog/monitoring-apache-cassandra-metrics-graphite-grafana/)
