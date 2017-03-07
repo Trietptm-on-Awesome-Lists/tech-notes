@@ -71,8 +71,13 @@ This is the address that the host listens on. When left unspecified, the listen 
 2. [Jepsen Cassandra](https://aphyr.com/posts/294-jepsen-cassandra)
 3. [Learn Cassandra in X minutes](https://jeoygin.gitbooks.io/learn-y-in-x-minutes/content/cassandra.html)
 
+###Data Modeling
+- Need to know the read/write patterns before you create your data model. This also applies to indexes. Indexes in Cassandra are a requirement for specific types of queries, unlike a relational database where indexes are a performance-tuning device.
+
 ####Internals
 1. [Operating Cassandra](http://cassandra.apache.org/doc/latest/operating/index.html)
 2. [Inernals from Cassandra Wiki](https://wiki.apache.org/cassandra/ArchitectureInternals)
 3. [Learn Cassandra](https://www.gitbook.com/book/teddyma/learncassandra/details)
 4. [Practical Cassandra - A developer's Approach]()
+5. [Amazon Dynamo Whitepaper]()
+6. [Google Big Table White paper]()
