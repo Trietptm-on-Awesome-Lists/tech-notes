@@ -17,46 +17,46 @@ defined as a key/value store where one key can map to one or more values.
 # num_tokens - default 256 - This means the amount of data in propotion to the cluster this node owns.
 
 # initial_token - default None.
-# when setting up a new cluster, it is important to manually calculate the tokens for each node that will be in the cluster.
+When setting up a new cluster, it is important to manually calculate the tokens for each node that will be in the cluster.
 
 #authenticator - Default: org.apache.cassandra.auth.AllowAllAuthenticator
-#It is recommended to use a replication factor of 2 or higher when using the PasswordAuthenticator to prevent data loss in the event of #an outage.
+It is recommended to use a replication factor of 2 or higher when using the PasswordAuthenticator to prevent data loss in the event of an outage.
 
 #authorizer
 Default: org.apache.cassandra.auth.AllowAllAuthorizer.
 
 # permissions_validity_in_ms - Default: 2000
-# If permissions do not change very often, increase this value to increase the read/write performance.
+If permissions do not change very often, increase this value to increase the read/write performance.
 
 #partitioner
 Default: org.apache.cassandra.dht.Murmur3Partitioner.
 It is important to note that when using the ordered partitioners such as ByteOrdered pr CollatingOPP, the ability to do range slices is increased  but may also lead to hot spots. If you change this parameter, you will destroy all data in the data directories.
 
 #data_file_directories - Default: /var/lib/cassandra/data.
-# Cassandra should store the data on disk.
+Cassandra should store the data on disk.
 
 #commitlog_directory Default: /var/lib/cassandra/commitlog.
 This value should reside on a different volume from the data_file_directories.
 
 #disk_failure_policy - Default: stop .
 
-#saved_caches_directory - Default: /var/lib/cassandra/saved_caches. Specifies the directory in which to store
-#the saved caches.
+#saved_caches_directory - Default: /var/lib/cassandra/saved_caches. 
+Specifies the directory in which to store the saved caches.
 
 #commitlog_sync - Default: periodic.
-#Cassandra will not acknowledge writes until the batch has been fsynced.
+Cassandra will not acknowledge writes until the batch has been fsynced.
 
 #commitlog_sync_period_in_ms - Default: 10000. Specifies the time in which Cassandra will fsync writes to disk. When
-#using batch syncs, this value should be low as writes will block until the sync happens.
+using batch syncs, this value should be low as writes will block until the sync happens.
 
-#commitlog_segment_size_in_mb - Default: 32. This specifies how large the CommitLog will grow before a new file is
-#created.
+#commitlog_segment_size_in_mb - Default: 32. 
+This specifies how large the CommitLog will grow before a new file is created.
 
 #seed_provider- Default: org.apache.cassandra.locator.SimpleSeedProvider.
-#When running a multiple-node cluster, it is important to have as many seeds as possible so new nodes will be able to bootstrap in the #event of an outage of a seed node.
+When running a multiple-node cluster, it is important to have as many seeds as possible so new nodes will be able to bootstrap in the event of an outage of a seed node.
 
 #concurrent_reads -Default: 32.
-#A general rule of thumb is to set this value to 16 * the number of disks in use by data_file_directories.
+A general rule of thumb is to set this value to 16 * the number of disks in use by data_file_directories.
 
 #concurrent_writes - Default: 32. The number of concurrent writes. Because writes are appended to the CommitLog, they are almost never #I/O bound. The general rule of thumb for concurrent writes is 16 * the number of cores in the machine.
 
@@ -64,11 +64,7 @@ This value should reside on a different volume from the data_file_directories.
 When specified, Cassandra will flush the largest MemTable when this limit has been reached. When left unspecified, Cassandra will flush the largest MemTable when it reaches one-third of the heap.
 
 #listen_address - Default: localhost. 
-#This is the address that the host listens on. When left unspecified, the listen address will default to the local address. In most #cases, this will work. If left at localhost, other nodes may not be able to communicate.
-
-
-
-
+This is the address that the host listens on. When left unspecified, the listen address will default to the local address. In most cases, this will work. If left at localhost, other nodes may not be able to communicate.
 
 ```
 1. [Setup a highly avaiable cluster](http://highscalability.com/blog/2016/8/1/how-to-setup-a-highly-available-multi-az-cassandra-cluster-o.html)
