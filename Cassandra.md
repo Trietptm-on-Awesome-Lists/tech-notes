@@ -4,6 +4,7 @@
 - designed to handle large amounts of data spread across many commodity servers while remaining highly available. Cassandra is loosely 
 defined as a key/value store where one key can map to one or more values.
 - Is architected to handle real-time big-data workloads across multiple data centers with no single point of failure. Every node in a cluster can serve any request.
+- Cassandra is typically classified as an AP system, meaning that availability and partition tolerance are generally considered to be more important than consistency in Cassandra. But Cassandra can be tuned with replication factor and consistency level to also meet C.
 
 ####Key Features
 1. Schema-less if needed.
