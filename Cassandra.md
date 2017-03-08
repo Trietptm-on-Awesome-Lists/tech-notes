@@ -79,6 +79,7 @@ This is the address that the host listens on. When left unspecified, the listen 
 ![](https://teddyma.gitbooks.io/learncassandra/content/assets/sortedmap.jpg)
 
 [CQL Command Reference](http://docs.datastax.com/en/cql/3.1/cql/cql_reference/cqlCommandsTOC.html)
+
 [Understanding how CQL maps to Cassandra's internal data structure](http://opensourceconnections.com/blog/2013/07/24/understanding-how-cql3-maps-to-cassandras-internal-data-structure/)
 
 ####Internals
@@ -93,5 +94,7 @@ This is the address that the host listens on. When left unspecified, the listen 
 
 ####Monitoring
 1.[Enable Cassandra Monitoring with Graphana](https://www.pythian.com/blog/monitoring-apache-cassandra-metrics-graphite-grafana/)
+
 2.[Cassandra monitoring part1](https://softwaremill.com/cassandra-monitoring-part-1/)
+
 3. [Cassibility - Prometheus/Cassandra](https://github.com/outbrain/Cassibility)
