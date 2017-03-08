@@ -76,6 +76,8 @@ This is the address that the host listens on. When left unspecified, the listen 
 ###Data Modeling
 - Need to know the read/write patterns before you create your data model. This also applies to indexes. Indexes in Cassandra are a requirement for specific types of queries, unlike a relational database where indexes are a performance-tuning device.
 
+![](https://teddyma.gitbooks.io/learncassandra/content/assets/sortedmap.jpg)
+
 ####Internals
 - Cassandra is a Dynamo system. it divides a hash ring into a several chunks, and keeps N replicas of each chunk on different nodes. It uses tunable quorums, hinted handoff, and active anti-entropy to keep replicas up to date.
 
