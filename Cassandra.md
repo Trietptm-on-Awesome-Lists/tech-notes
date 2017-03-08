@@ -79,6 +79,7 @@ This is the address that the host listens on. When left unspecified, the listen 
 ![](https://teddyma.gitbooks.io/learncassandra/content/assets/sortedmap.jpg)
 
 [CQL Command Reference](http://docs.datastax.com/en/cql/3.1/cql/cql_reference/cqlCommandsTOC.html)
+[Understanding how CQL maps to Cassandra's internal data structure](http://opensourceconnections.com/blog/2013/07/24/understanding-how-cql3-maps-to-cassandras-internal-data-structure/)
 
 ####Internals
 - Cassandra is a Dynamo system. it divides a hash ring into a several chunks, and keeps N replicas of each chunk on different nodes. It uses tunable quorums, hinted handoff, and active anti-entropy to keep replicas up to date.
