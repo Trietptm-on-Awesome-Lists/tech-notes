@@ -78,6 +78,13 @@ This is the address that the host listens on. When left unspecified, the listen 
 
 ![](https://teddyma.gitbooks.io/learncassandra/content/assets/sortedmap.jpg)
 
+- Creating a table in Cassandra, also tells it how to store and distribute the data. This is done via the <b>primary key</b> definitiion.
+
+- When there are multiple fields in the PRIMARY KEY , as is the case with compound keys,the first field is the partition key (how the data is distributed) and the subsequent fields are known as the clustering keys (how the data is stored on disk).
+
+- Rows are not segmented accross nodes. This means that the entire row will exist in a particular node, this may cause read/write hotspots due to spikes in writes/reads for that particular row.
+
+and type of data are, you are also telling it how to store and distribute your data
 [CQL Command Reference](http://docs.datastax.com/en/cql/3.1/cql/cql_reference/cqlCommandsTOC.html)
 
 [Understanding how CQL maps to Cassandra's internal data structure](http://opensourceconnections.com/blog/2013/07/24/understanding-how-cql3-maps-to-cassandras-internal-data-structure/)
