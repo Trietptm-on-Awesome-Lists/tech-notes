@@ -1,4 +1,4 @@
-#Cassandra Notes
+# Cassandra Notes
 
 - Key/Value and a row store. No need for pre-defined schemas, even rows within a ColumnFamily are not required to always follow the same naming schema.
 - designed to handle large amounts of data spread across many commodity servers while remaining highly available. Cassandra is loosely 
@@ -7,12 +7,12 @@ defined as a key/value store where one key can map to one or more values.
 - Cassandra is typically classified as an AP system, meaning that availability and partition tolerance are generally considered to be more important than consistency in Cassandra. But Cassandra can be tuned with replication factor and consistency level to also meet C.
 - Cassandra supplies linear scalability, meaning that capacity may be easily added simply by adding new nodes online. 
 
-####Key Features
+#### Key Features
 1. Schema-less if needed.
 2. Homogenous Environment - each and every Cassandra node contains everything required to complete a cluster.
 3. Tunable Consistency
 
-####[Configuration](http://cassandra.apache.org/doc/latest/configuration/cassandra_config_file.html) - (Cassandra.yaml)
+#### [Configuration](http://cassandra.apache.org/doc/latest/configuration/cassandra_config_file.html) - (Cassandra.yaml)
 ```bash
 # Cluster_name
 
@@ -73,7 +73,7 @@ This is the address that the host listens on. When left unspecified, the listen 
 2. [Jepsen Cassandra](https://aphyr.com/posts/294-jepsen-cassandra)
 3. [Learn Cassandra in X minutes](https://jeoygin.gitbooks.io/learn-y-in-x-minutes/content/cassandra.html)
 
-###Data Modeling
+### Data Modeling
 - Need to know the read/write patterns before you create your data model. This also applies to indexes. Indexes in Cassandra are a requirement for specific types of queries, unlike a relational database where indexes are a performance-tuning device.
 
 ![](https://teddyma.gitbooks.io/learncassandra/content/assets/sortedmap.jpg)
@@ -84,7 +84,7 @@ This is the address that the host listens on. When left unspecified, the listen 
 
 - Rows are not segmented accross nodes. This means that the entire row will exist in a particular node, this may cause read/write hotspots due to spikes in writes/reads for that particular row.
 
-####Key Points
+#### Key Points
 1. Model usage and queries, not the data;
 2. Denormalization and duplication of data are not bad—in fact, they are recommended.
 3. Collections can be very powerful, but they may impact performance when it comes to very large data sets.
@@ -93,7 +93,7 @@ This is the address that the host listens on. When left unspecified, the listen 
 
 [Understanding how CQL maps to Cassandra's internal data structure](http://opensourceconnections.com/blog/2013/07/24/understanding-how-cql3-maps-to-cassandras-internal-data-structure/)
 
-####Internals
+#### Internals
 - Cassandra is a Dynamo system. it divides a hash ring into a several chunks, and keeps N replicas of each chunk on different nodes. It uses tunable quorums, hinted handoff, and active anti-entropy to keep replicas up to date.
 
 1. [Operating Cassandra](http://cassandra.apache.org/doc/latest/operating/index.html)
@@ -103,7 +103,7 @@ This is the address that the host listens on. When left unspecified, the listen 
 5. [Amazon Dynamo Whitepaper](http://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf)
 6. [Google Big Table White paper](http://xpgc.vicp.net/course/svt/TechDoc/storagepaper/bigtable-osdi06.pdf)
 
-####Monitoring
+#### Monitoring
 1.[Enable Cassandra Monitoring with Graphana](https://www.pythian.com/blog/monitoring-apache-cassandra-metrics-graphite-grafana/)
 
 2.[Cassandra monitoring part1](https://softwaremill.com/cassandra-monitoring-part-1/)
